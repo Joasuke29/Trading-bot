@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+    <title>Trading Bot Assistant</title>
+</head>
+<body>
+<header>
+    <h1>Trading bot Assistant</h1>
+    <p>Risk Management • Prediction • Lot Size Calculator</p>
+</header> 
+<main>
+    <!--MARKET STATUSL-->
+    <section id="market-status">
+        <h2>Market Status</h2>
+        <p>Pair: <span id="pair">BTCUSDT</span></p>
+        <p>Price: <span id="price">price</span></p>
+        <p>Trend: <span id="trend">BTCUSDT</span></p>
+    </section>
+    <!--PREDICTION-->
+    <section id="Prediction">
+        <h2>Prediction Signal</h2>
+        <p>Signal: <span id="signal">NEUTRAL</span></p>
+        <p>Confidence: <span id="confidence">0%</span></p>
+    </section>
+    <!--LOT SIZE CALCULATOR-->
+    <section id="lot-calculator">
+        <h2>Lot Size Calculator</h2>
+
+        <label >Account Balance</label>
+        <input type="number" id="balanceInput" placeholder="e.g. 1000">
+
+        <label >Risk(%)</label>
+        <input type="number" id="riskInput" placeholder="e.g. 2">
+
+        <label >Stop loss (pips) </label>
+        <input type="number" id="slInput" placeholder="e.g. 20">
+
+        <label >Pip Value</label>
+        <input type="number" id="pipInput" placeholder="e.g 1">
+
+        <button id="calculateBtn">Calculate Lot Size</button>
+        <h3>Result:</h3>
+        <p id="lotResult">--</p>
+    </section>
+    <!--RISK MANAGEMENT-->
+    <section id="risk-management">
+        <h2>Risk Management</h2>
+        <p>Risk Amount: <span id="riskAmount">--</span></p>
+        <p>Risk Reward Ratio: <span id="rrr">--</span></p>
+        <p id="riskWarning"></p>
+    </section>
+    <!--TRADE JOURNAL-->
+    <section id="trade-journal">
+        <h2>Trade Journal</h2>
+        <ul id="journalist">
+        </ul>
+    </section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
